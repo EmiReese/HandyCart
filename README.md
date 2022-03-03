@@ -5,7 +5,6 @@ A group project to create a full-stack MERN app; From conception to deployment, 
 There will be a clean and intuitive UI built with React and a CSS framework such as Tailwind, functional code Application Programming Interface - we will be using Apollo and GraphQL, and well-structured Mongo DataBase.
 <br>
 
-THIS IS A NOTE!
 
 
 ## Technical Requirements
@@ -54,7 +53,7 @@ To be determined
 
 <img src="screenshot placeholder" width="100" alt="Screenshot Placeholder"><br>
 
-<a href="https://github.com/EmiReese/mern-app/projects/1">`Project Board!`</a>
+<a href="https://github.com/EmiReese/mern-app/projects/2">`Project Board!`</a>
 
 <a href="https://www.figma.com/file/rwryU0NRq1MrNWRYGCwGJG/Untitled?node-id=0%3A1">
 `Wireframes!-->`FIGMA</a>
