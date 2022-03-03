@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Family-Grocery-List-Budget-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A group project to create a full-stack MERN app; From conception to deployment, we are creating a Grocery-List app.
+<br>
+There will be a clean and intuitive UI built with React and a CSS framework such as Tailwind, functional code Application Programming Interface - we will be using Apollo and GraphQL, and well-structured Mongo DataBase.
+<br>
 
-## Available Scripts
+THIS IS A NOTE!
 
-In the project directory, you can run:
 
-### `npm start`
+## Technical Requirements
+<details>
+<summary>
+Click Here
+</summary>
+<p>
+<ol>
+<li>React (to confirm, React Router is required)</li>
+<li> Database of some kind (MongoDB preferred, if MySQL, must demonstrate why it's needed)</li>
+<li> ODM / ORM usage</li>
+<li> Some way to pass data via API (GraphQL preferred, Express API is acceptable)</li>
+<li> Some state management (Hooks || Context API || Redux)</li>
+<li> CSS Library</li>
+<li> 2 new technologies of any kind (can be npm pagkages)</li>
+<li> Must be deployed (Heroku or any deployment service of your choice)</li>
+<li>Authentication w/ JWT (nice-to-have) </li>
+<li> PWA (optional)</li>
+<li> Payment processing (optional)</li>
+</ol>
+</p>
+</details>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment (TBD)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="placeholder.com"><img align="right" img src="placeholder" width="200px" alt="placeholder"></a><br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Story
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+As a typical household <br>
+I/We need an a functional grocery list<br>
+So that I/we can purchase the correct items and manage my/our grocery budget.<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
+To be determined
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<img src="screenshot placeholder" width="100" alt="Screenshot Placeholder"><br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://github.com/EmiReese/mern-app/projects/1">`Project Board!`</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="https://www.figma.com/file/rwryU0NRq1MrNWRYGCwGJG/Untitled?node-id=0%3A1">
+`Wireframes!-->`FIGMA</a>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Notes
+Placeholder
 
-### Analyzing the Bundle Size
+#### Technologies
+<ul>
+  <li>GitHub</li>
+  <li>Figma</li>
+  <li>vsCode</li>
+  <li>MongoDB/Mongoose</li>
+  <li>dotEnv</li>
+  <li>GraphQL/Apollo</li>
+  <li>Tailwind?</li>
+  <li>Heroku?</li>
+  <li>JawsDB?</li>
+ </ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributors
+<a href="https://github.com/EmiReese">Emily </a>, <a href="https://github.com/Cheez0id">Mary </a>, <a href="https://github.com/jhahnsheen">Sheen</a>, <a href="https://github.com/TGolden95">Triston</a>
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
