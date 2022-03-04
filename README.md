@@ -45,6 +45,114 @@ As a typical household <br>
 I/We need an a functional grocery list<br>
 So that I/we can purchase the correct items and manage my/our grocery budget.<br>
 
+<details><summary>detailed user story</summary>
+
+## One List
+
+<ol>
+<li> When I open the app for the first time, I am greeted with the option to either log in or sign up
+  <ul>
+  <li>A. Sign up with email, first name, last name, and password</li>
+    <li>B. After signing up, I am automatically logged in. </li>
+  </ul>
+</li>
+<li> After I am logged in, I am shown my profile.
+  <ul>
+  <li>A. My profile will show </li>
+    <ul>
+    <li>User Header</li>
+    <li>Active groups</li>
+    <li>Option to create new list</li>
+    </ul>
+  </ul>
+</li>
+<li> When I select a list
+  <ul>
+  <li>A. I am shown </li>
+    <ol>
+    <li>Participants of that list</li>
+    <li>Option to remove item</li>
+    <li>All the items in that list</li>
+      <ol>
+      <li>Option to close an item (mark as purchased)</li>
+      <li>Option to remove item</li>
+      <li>One list item will show</li>
+        <ol>
+        <li>Item name</li>
+        <li>Item price</li>
+       </ol>
+      </ol>
+     <li>Option to reset purchase state of all items on list with one button</li> 
+     <li>Option to clear list</li> 
+     <li>Remaining Balance on bottom right</li> 
+        <ol>
+        <li>When clicked, I am shown</li>
+        <ol>
+        <li>Total Budget (can be edited)</li>
+        <li>Total price  (cannot be edited)</li>
+        <li>Remaining Balance (Cannot be edited)</li>
+        </ol>
+       </ol>
+    </ol>
+  <li>B.Option to add an item</li>
+    <ul>
+    <li>When selected, prompt user to enter new item details (preferably in a modal)</li>
+    <ul>
+    <li>When modal is open, have the option to close it and cancel new item at any time</li>
+    </ul>
+    </ul>
+  <li>C.Option to close list/group</li>
+    </ol>
+  </ul>
+</li>
+<li>4. When I select new list group</li>
+ <ul>
+  <li>A. Modal opens up prompting for: </li>
+    <ul>
+    <li>Other members</li>
+    <li>List Name</li>
+    </ul>
+    <li>B. Show an empty new list with other members added</li>
+  </ul>
+</ol>
+
+
+
+
+After I am logged in, I am shown my profile.
+My profile will show 
+User Header
+Active groups
+Option to create new group
+When I select a group
+I am shown 
+Name of the list
+Participants of that list
+All the items in that list
+Option to close an item (mark as purchased)
+Option to remove item
+One list item will show
+Item name
+Item price
+Option to reset purchase state of all items on list with one button
+Option to clear list
+Remaining Balance on bottom right
+When clicked, I am shown
+Total Budget (can be edited)
+Total price  (cannot be edited)
+Remaining Balance (Cannot be edited)
+Option to add an item
+When selected, prompt user to enter new item details (preferably in a modal)
+When modal is open, has suggestions based on previous lists
+When modal is open, have the option to close it and cancel new item at any time
+Option to close list
+When I select new list 
+Add other members
+Show an empty new list with other members added
+
+
+</details>
+
 
 
 ## Installation
