@@ -46,8 +46,6 @@ I/We need an a functional grocery list<br>
 So that I/we can purchase the correct items and manage my/our grocery budget.<br>
 
 <details><summary>detailed user story</summary>
-One List / Groups only
-
 When I open the app for the first time, I am greeted with the option to either log in or sign up
 Sign up with email, first name, last name, and password
 After signing up, I am automatically logged in. 
@@ -66,17 +64,24 @@ Option to close an item (mark as purchased)
 Option to remove item
 One list item will show
 Item name
-Item price (auto-populated from last entry but easily changed. Price will be saved for next time)
+Item price
 Option to reset purchase state of all items on list with one button
-Budget/Total cost ($26/$100)
+Option to clear list
+Remaining Balance on bottom right
+When clicked, I am shown
+Total Budget (can be edited)
+Total price  (cannot be edited)
+Remaining Balance (Cannot be edited)
 Option to add an item
 When selected, prompt user to enter new item details (preferably in a modal)
 When modal is open, has suggestions based on previous lists
 When modal is open, have the option to close it and cancel new item at any time
-Option to close list/group as ‘inactive’
-When I select new list group
+Option to close list
+When I select new list 
 Add other members
 Show an empty new list with other members added
+
+
 </details>
 
 
