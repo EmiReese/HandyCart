@@ -18,6 +18,10 @@ const itemSchema = new Schema({
     min: 0,
     default: 1
   },
+  purchased: {
+    type: Boolean,
+    required: true
+  }
 });
 
 module.exports = itemSchema;
