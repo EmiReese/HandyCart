@@ -1,11 +1,8 @@
-
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const User = require('./User');
-const Item = require('./Item');
-
-
+const itemSchema = require('./Item');
 
 const listSchema = new Schema({
   name: {
@@ -13,10 +10,13 @@ const listSchema = new Schema({
     required: true,
     trim: true
   },
-    users: [User.schema],
-    users: [Item.schema],
-
-
+  users: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }
+  ],
+  items: [itemSchema]
 });
 
 const List = mongoose.model('List', listSchema);

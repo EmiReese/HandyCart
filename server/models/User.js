@@ -6,7 +6,7 @@ const List = require('./List');
 
 
 const userSchema = new Schema({
-userName: {
+  userName: {
     type: String,
     required: true,
     trim: true
@@ -16,8 +16,12 @@ userName: {
     required: true,
     minlength: 5
   },
-  lists: [List.schema]
-  
+  lists: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'List'
+    }
+  ]  
 });
 
 // set up pre-save middleware to create password
