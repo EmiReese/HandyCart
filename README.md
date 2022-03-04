@@ -1,11 +1,10 @@
-# Family-Grocery-List-Budget-App
+# HandyCart - A Grocery-List Budget App
 
 A group project to create a full-stack MERN app; From conception to deployment, we are creating a Grocery-List app.
 <br>
 There will be a clean and intuitive UI built with React and a CSS framework such as Tailwind, functional code Application Programming Interface - we will be using Apollo and GraphQL, and well-structured Mongo DataBase.
 <br>
 
-THIS IS A NOTE!
 
 
 ## Technical Requirements
@@ -54,7 +53,7 @@ To be determined
 
 <img src="screenshot placeholder" width="100" alt="Screenshot Placeholder"><br>
 
-<a href="https://github.com/EmiReese/mern-app/projects/1">`Project Board!`</a>
+<a href="https://github.com/EmiReese/mern-app/projects/2">`Project Board!`</a>
 
 <a href="https://www.figma.com/file/rwryU0NRq1MrNWRYGCwGJG/Untitled?node-id=0%3A1">
 `Wireframes!-->`FIGMA</a>
@@ -63,19 +62,22 @@ To be determined
 ## Notes
 Placeholder
 
-#### Technologies
+#### Technologies and NPM Libraries
 <ul>
   <li>GitHub</li>
   <li>Figma</li>
   <li>vsCode</li>
   <li>MongoDB/Mongoose</li>
-  <li>dotEnv</li>
   <li>GraphQL/Apollo</li>
-  <li>Tailwind?</li>
-  <li>Heroku?</li>
-  <li>JawsDB?</li>
+  <li>Tailwind</li>
+  <li>Heroku</li>
+  <li>MongoDB Atlas</li>
+  <li>Bcrypt</li>
+  <li>https://www.npmjs.com/package/calculate-total-price</li>
+    <li>https://www.npmjs.com/package/validator</li>
+
  </ul>
 
 ## Contributors
-<a href="https://github.com/EmiReese">Emily </a>, <a href="https://github.com/Cheez0id">Mary </a>, <a href="https://github.com/jhahnsheen">Sheen</a>, <a href="https://github.com/TGolden95">Triston</a>
+<a href="https://github.com/EmiReese">Emily Reese</a>, <a href="https://github.com/Cheez0id">Mary Prince</a>, <a href="https://github.com/jhahnsheen">Sheen Hahn</a>, <a href="https://github.com/TGolden95">Triston Golden</a>
 
