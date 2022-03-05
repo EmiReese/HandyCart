@@ -4,23 +4,27 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User { 
-    # Define which fields are accessible from the User model
     _id: ID
     userName: String
     password: String
     lists: [List]
  }
   type List { 
-    # Define which fields are accessible from the List model
     _id: ID
     name: String
     users: String
-    items: [[Item.name, Item.price, Item.quantity, Item.purchased]]
+    items: [Item]
  }
- 
+ type Item { 
+  _id: ID
+  name: String
+  price: Number
+  quantity: Number
+} 
  type Query {
   users: [User]
   lists: [List]
+  items: [Item]
 }
 
  type Mutation {
@@ -31,7 +35,7 @@ const typeDefs = gql`
 
   type Mutation {
     type Query {
-      lists: [Item.name, Item.price, Item.quantity, Item.purchased]
+      lists: [Item]
     }
   }
 `;
@@ -41,13 +45,7 @@ module.exports = typeDefs;
 
 //-------------
 
-// type Item { 
-//   # Define which fields are accessible from the Item schema?
-//   _id: ID
-//   name: String
-//   price: Number
-//   quantity: Number
-// }
+
 // type Mutation {
 //   # Define which queries the front end is allowed to make and what data is returned
 //   type Query {
