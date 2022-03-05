@@ -3,8 +3,12 @@ const { User, List } = require('../models');
 //responsible for populating data defined by our typedefs
 const resolvers = {
   Query: {
-    userProfile: async () => {
-
+    userProfile: async (username) => {
+      return await User.findOne({username}).populate
+      ('lists').populate({
+      path: 'lists',
+      populate: 'items'
+      }); 
     },
     lists: async () => {
 

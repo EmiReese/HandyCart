@@ -10,13 +10,12 @@ const typeDefs = gql`
     password: String
     lists: [List]
  }
-
   type List { 
     # Define which fields are accessible from the List model
     _id: ID
     name: String
     users: String
-    items: [Item]
+    items: [[Item.name, Item.price, Item.quantity, Item.purchased]]
  }
  
  type Query {
