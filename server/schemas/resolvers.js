@@ -1,5 +1,6 @@
 const { User, List } = require('../models');
 
+//responsible for populating data defined by our typedefs
 const resolvers = {
   Query: {
     userProfile: async () => {
