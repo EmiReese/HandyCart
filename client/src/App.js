@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import SignupButton from './components/parts/SignupButton';
+import LoginButton from './components/parts/LoginButton';
 import './tailwind.config';
 
 function App() {
   return (
 
     <div className="App">
-        <Login />
-      <Signup />
+        <LoginButton />
+      <SignupButton />
        </div>
   );
 }

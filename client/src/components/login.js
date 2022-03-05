@@ -2,7 +2,7 @@
 import React from 'react';
 import '../tailwind.config';
 // component
-//     This code was taken from this very first sign up sheet "https://tailwindcomponents.com/component/sign-up".
+//     This code was taken from this very first sign up sheet "https://web3templates.com/components/forms".
 //=======================================================================
 //     Name    :   Simple Sign In
 //     Author  :   Surjith S M
