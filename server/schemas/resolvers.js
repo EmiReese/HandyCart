@@ -1,12 +1,18 @@
 const { User, List } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { populate } = require('../models/List');
 
 const resolvers = {
   Query: {
-    userProfile: async () => {
-
+    userProfile: async (parent, args, context) => {
+      if(context.user) {
+        const userData = await User.findById(context.user._id).select('-__v -password');
+        return userData;
+      }
+      throw new AuthenticationError('Please log in');
     },
-    lists: async () => {
-
+    lists: async (parent, { _id }) => {
+      return await List.findById(_id).populate('users');
     }
   },
   Mutation: {
@@ -44,6 +50,9 @@ const resolvers = {
 
     },
     deleteList: async (parents, args) => {
+
+    },
+    logout: async (parents, args, context) => {
 
     }
   }
