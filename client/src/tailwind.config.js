@@ -13,7 +13,7 @@ module.exports = {
         'accent': '#1995AD', 
         //Light - warm gray 
         'light': '#BCBABE',
-        //Dark - Dark Gray 
+      // Dark - Dark Gray   
         'dark': '#083C54'
       },
       //more theme items to come. 
