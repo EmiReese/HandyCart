@@ -18,16 +18,20 @@ const typeDefs = gql`
     users: String
     items: [Item]
  }
+ 
+ type Query {
+  users: [User]
+  lists: [List]
+}
+
 
  type Mutation {
-  # Define which queries the front end is allowed to make and what data is returned
   type Query {
     users: [User]
   }
 }
 
   type Mutation {
-    # Define which queries the front end is allowed to make and what data is returned
     type Query {
       lists: [List]
     }
