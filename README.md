@@ -115,42 +115,6 @@ So that I/we can purchase the correct items and manage my/our grocery budget.<br
     <li>B. Show an empty new list with other members added</li>
   </ul>
 </ol>
-
-
-
-
-After I am logged in, I am shown my profile.
-My profile will show 
-User Header
-Active groups
-Option to create new group
-When I select a group
-I am shown 
-Name of the list
-Participants of that list
-All the items in that list
-Option to close an item (mark as purchased)
-Option to remove item
-One list item will show
-Item name
-Item price
-Option to reset purchase state of all items on list with one button
-Option to clear list
-Remaining Balance on bottom right
-When clicked, I am shown
-Total Budget (can be edited)
-Total price  (cannot be edited)
-Remaining Balance (Cannot be edited)
-Option to add an item
-When selected, prompt user to enter new item details (preferably in a modal)
-When modal is open, has suggestions based on previous lists
-When modal is open, have the option to close it and cancel new item at any time
-Option to close list
-When I select new list 
-Add other members
-Show an empty new list with other members added
-
-
 </details>
 
 
