@@ -24,7 +24,6 @@ const typeDefs = gql`
   lists: [List]
 }
 
-
  type Mutation {
   type Query {
     users: [User]
@@ -33,7 +32,7 @@ const typeDefs = gql`
 
   type Mutation {
     type Query {
-      lists: [List]
+      lists: [Item.name, Item.price, Item.quantity, Item.purchased]
     }
   }
 `;
