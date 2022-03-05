@@ -12,7 +12,7 @@ import '../../tailwind.config';
 //     Copyright © 2021
 //     =======================================================================
  
-
+// This is our function that creates the login structure.
 function Login () {
     return (
         <div class="flex items-center min-h-screen bg-white dark:bg-gray-900">
