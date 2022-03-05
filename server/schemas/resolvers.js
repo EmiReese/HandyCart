@@ -4,8 +4,7 @@ const { User, List } = require('../models');
 const resolvers = {
   Query: {
     userProfile: async () => {
-      return await User.findOne({}).populate
-      ('lists').populate({
+      return await User.findOne({}).populate('lists').populate({
       path: 'lists',
       populate: 'items'
       }); 
