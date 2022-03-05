@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '../../tailwind.config';
+import '../tailwind.config';
 // component
 //     =======================================================================
 //     Name    :   Simple Sign In
