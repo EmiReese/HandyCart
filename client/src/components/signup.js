@@ -1,89 +1,29 @@
 import React from 'react';
-import { LockClosedIcon } from '@heroicons/react/solid';
 import '../tailwind.config';
+
+//This is where I got the code for this component "https://tailwindcomponents.com/component/sign-up".
 
 export default function Signup() {
         return (
-              <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-md w-full space-y-8">
-                  <div>
-                    <img
-                      className="mx-auto h-12 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt="Workflow"
-                    />
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
-                    <p className="mt-2 text-center text-sm text-gray-600"></p>
-                  </div>
-
-                  <form className="mt-8 space-y-6" action="#" method="POST">
-                    <input type="hidden" name="remember" defaultValue="true" />
-                    <div className="rounded-md shadow-sm -space-y-px">
-
-                         <div>
-                           <label htmlFor="email-address" className="sr-only">
-                             Email address
-                           </label>
-                            <input
-                          id="email-address"
-                          name="email"
-                          type="email"
-                          autoComplete="email"
-                          required
-                          className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                          placeholder="Email address"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="password" className="sr-only">
-                          Password
-                        </label>
-                        <input
-                          id="password"
-                          name="password"
-                          type="password"
-                          autoComplete="current-password"
-                          required
-                          className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                          placeholder="Password"
-                        />
-                      </div>
-                    </div>
-        
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <input
-                          id="remember-me"
-                          name="remember-me"
-                          type="checkbox"
-                          className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                        />
-                        <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                          Remember me
-                        </label>
-                      </div>
-        
-                       <div className="text-sm">
-                        <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                          Forgot your password?
-                        </a>
-                      </div> 
-                     </div>
-        
-                    <div>
-                      <button
-                        type="submit"
-                        className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                      >
-                        <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                          <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-                        </span>
-                        Sign in
-                      </button>
-                    </div>
-                  </form>
-                </div>
+          <section class="text-gray-600 body-font">
+            {/* <div class="container px-5 py-24 mx-auto flex flex-wrap items-center justify-center" style="background:url('https://cdn.pixabay.com/photo/2017/08/19/19/43/nature-2659682_1280.jpg')"> */}
+              <div class="lg:w-3/5 lg:pr-0 pr-0">
+                <h1 class="title-font font-medium font-bold text-5xl text-white">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
+                <p class="leading-relaxed mt-4 text-white">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
               </div>
-  );  
-}
+              <div class="lg:w-2/6 xl:w-2/5 md:w-2/3 bg-gray-100 rounded-lg p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0">
+                <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign Up</h2>
+                <div class="relative mb-4">
+                  <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
+                  <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                </div>
+                <div class="relative mb-4">
+                  <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                </div>
+                <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+              </div>
+          </section>
+          );
+          }

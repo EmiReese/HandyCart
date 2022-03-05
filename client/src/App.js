@@ -6,6 +6,7 @@ import './tailwind.config';
 
 function App() {
   return (
+
     <div className="App">
         <Login />
       <Signup />
