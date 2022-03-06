@@ -1,24 +1,18 @@
 
 import React from 'react';
 
-import Login from './pages/Login';
-import Signup from './pages/Signup'
 import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
+import Home from './pages/Home';
 
 
-function App() {
+
+
+export default function App() {
   return (
-
-       <div>
-  
-          <Login />
-          <Signup />
-       </div>
+  <div>
+<Home />
+</div>
+  );}
 
 
-     
-  );
-}
-
-export default App;

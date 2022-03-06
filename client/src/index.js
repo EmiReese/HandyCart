@@ -11,9 +11,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignupButton from './components/parts/SignupButton';
+import LoginButton from './components/parts/LoginButton';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-
+import Home from './pages/Home';
 
 const client = new ApolloClient({
   uri: 'https://48p1r2roz4.sse.codesandbox.io',
@@ -27,8 +29,8 @@ ReactDOM.render(
       <Routes>
         <Route>
         <Route 
-                path="/" 
-                element={<App />} 
+                path="/home" 
+                element={<Home />} 
               />
           <Route 
                 path="/login" 
@@ -39,9 +41,11 @@ ReactDOM.render(
                 element={<Signup />} 
               />
         </Route>
-      </Routes>
-    </div>
      
+      </Routes>
+     
+    </div>
+  
     </App>
   </ApolloProvider>,
   document.getElementById('root')
