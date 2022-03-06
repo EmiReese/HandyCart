@@ -1,8 +1,7 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-These may need to be updated and commented out 
-*/
+/* These may need to be updated and commented out  */
 
 body {
   margin: 0;
