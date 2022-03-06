@@ -4,3 +4,11 @@ module.exports = {
     autoprefixer: {},
   },
 }
+module.exports = {
+  style: {
+    postcss: {
+      plugins: 
+        [require('tailwindcss')],
+    }
+  }
+}

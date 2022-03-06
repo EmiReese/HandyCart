@@ -1,7 +1,6 @@
 import React from 'react';
-import Signup from '../Signup';
+import Signup from '../../pages/Signup';
 
-import { Link } from 'react-router-dom';
 
 
 export default function SignupButton () {
