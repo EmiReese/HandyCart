@@ -71,3 +71,19 @@ h4 {
   height: auto;
   margin-left: 40px;
 }
+
+input {
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+  color: #083c54;
+  font-size: 22px;
+  width: 100%;
+  font-family: courier, monospace;
+  background-color: #fef08a;
+}

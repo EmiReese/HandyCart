@@ -9,14 +9,43 @@ const List = () => {
         <div className="profile">
           <h4>Grocery List</h4>
         </div>
-        <li>Milk</li>
-        <li>Bread</li>
-        <li>Lobster</li>
-        <li>Steak</li>
-        <li>Frosted Flakes</li>
-        <li>Oreo Cookies</li>
-        <li>Orange juice</li>
-        <li>Doritos Nacho Cheese</li>
+        <div className="mb-3 pt-0">
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+          <input
+            type="text"
+            placeholder="Enter Item here"
+            class="px-3 py-3 placeholder-light text-dark relative bg-note rounded text-sm focus:outline-none focus:ring w-full"
+          />
+        </div>
       </ul>
     </body>
   );
