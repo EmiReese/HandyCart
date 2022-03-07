@@ -36,7 +36,6 @@ body {
 h4 {
   color: #1995ad;
   font-size: 42px;
-  letter-spacing: -2px;
   text-align: center;
   display: flex;
 }
@@ -45,7 +44,6 @@ h4 {
   font-size: 22px;
   padding: 0 !important;
   width: 100%;
-  text-align: center;
   font-family: courier, monospace;
 }
 .list li {
@@ -70,6 +68,7 @@ h4 {
   float: left;
   height: auto;
   margin-left: 40px;
+  padding: 2px;
 }
 
 input {
@@ -79,7 +78,23 @@ input {
   border-bottom: 1px dotted #ccc;
   text-indent: 25px;
   height: auto;
-  padding: 10px;
+  padding: 0 30px 0 0;
+  text-transform: capitalize;
+  color: #083c54;
+  font-size: 22px;
+  width: 100%;
+  font-family: courier, monospace;
+  background-color: #fef08a;
+}
+
+.input p {
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  height: auto;
+  padding: 0 30px 0 0;
   text-transform: capitalize;
   color: #083c54;
   font-size: 22px;
