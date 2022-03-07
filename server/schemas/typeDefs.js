@@ -18,29 +18,18 @@ const typeDefs = gql`
  type Item { 
   _id: ID
   name: String
-  price: Number
-  quantity: Number
+
 } 
  type Query {
-  users: [User]
+  userProfile: [User]
   lists: [List]
   items: [Item]
 }
 
- type Mutation {
-  type Query {
-    users: [User]
-  }
-}
-
-  type Mutation {
-    type Query {
-      lists: [Item]
-    }
-  }
 `;
 
 module.exports = typeDefs;
+
 
 
 //-------------
