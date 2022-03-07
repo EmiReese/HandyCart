@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0/handycart', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: true,
 });
 
 // export the mongoose connection
