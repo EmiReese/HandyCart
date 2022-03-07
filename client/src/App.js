@@ -17,6 +17,9 @@ import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
 import Home from './pages/Home';
 
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+
 import {
   ApolloClient,
   ApolloProvider,
@@ -32,8 +35,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginButton/>}/>
-          <Route path="/signup" element= {<SignupButton/>}/>
+        <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element= {<Signup/>}/>
           </Routes>
     </Router>
 </ApolloProvider>
