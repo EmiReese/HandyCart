@@ -7,9 +7,8 @@ import {
   useQuery,
   gql
 } from "@apollo/client";
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+import App from './App.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
@@ -24,29 +23,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App>
-    <div className= "container">
-      <Routes>
-        <Route>
-        <Route 
-                path="/" 
-                element={<Home />} 
-              />
-          <Route 
-                path="/login" 
-                element={<Login />} 
-              />
-                <Route 
-                path="/signup" 
-                element={<Signup />} 
-              />
-        </Route>
-     
-      </Routes>
-     
-    </div>
-  
-    </App>
+    <App />
   </ApolloProvider>,
   document.getElementById('root')
 );
@@ -54,5 +31,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 
