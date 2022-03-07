@@ -29,7 +29,7 @@ ReactDOM.render(
       <Routes>
         <Route>
         <Route 
-                path="/home" 
+                path="/" 
                 element={<Home />} 
               />
           <Route 
