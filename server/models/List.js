@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const itemSchema = require('./Item');
 
 const listSchema = new Schema(
   {
@@ -10,13 +9,23 @@ const listSchema = new Schema(
       required: true,
       trim: true
     },
+    budget: {
+      type: Number,
+      required: true,
+      default: 50
+    },
     users: [
       {
         type: Schema.Types.ObjectId,
         ref: 'User'
       }
     ],
-    items: [itemSchema]
+    items: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Item'
+      }
+    ]
   },
   {
     toJSON: {

@@ -21,6 +21,7 @@ const itemSchema = new Schema(
     },
     purchased: {
       type: Boolean,
+      default: false,
       required: true
     },
     creator: {
@@ -36,11 +37,13 @@ const itemSchema = new Schema(
 );
 
 // virtual that returns the username of the person who added the item
-itemSchema.virtual('creator', {
-  ref: 'User',
-  localField: 'creator',
-  foreignField: 'username',
-  justOne: true
-});
+// itemSchema.virtual('creator', {
+//   ref: 'User',
+//   localField: 'creator',
+//   foreignField: 'username',
+//   justOne: true
+// });
 
-module.exports = itemSchema;
+const Item = mongoose.model('Item', itemSchema);
+
+module.exports = Item;
