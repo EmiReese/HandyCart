@@ -17,13 +17,24 @@ const resolvers = {
   },
   Mutation: {
     signup: async (parent, args) => {
-      const user = await User.create(args);
+      const user = new User({
+        username: args.username,
+        password: args.password
+      })
       const token = signToken(user);
 
       return { token, user };
     },
     newList: async (parent, { name, budget }, context) => {
-      const list = await List.create({ name, budget }, context.user._id);
+      // console.log(context.user._id);
+      // const userId = context.user._id;
+      // const currentUser = await User.findById(userId);
+      // console.log(currentUser);
+      const list = new List({
+        name: name,
+        budget: budget,
+        users: context.user
+      });
 
       return list;
     },
