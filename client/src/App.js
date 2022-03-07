@@ -1,8 +1,13 @@
+import React from "react";
+import List from "./pages/List";
 
-import React from 'react';
+import Budget from "./components/Budget";
+import ExpenseTotal from "./components/ExpenseTotal";
+import Remaining from "./components/Remaining";
+
+
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link,
   Routes
@@ -11,13 +16,10 @@ import {
 import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloProvider,
-  useQuery,
   gql
 } from "@apollo/client";
 
@@ -25,16 +27,28 @@ import {
 
 export default function App() {
   return (
-    <div className="text-3xl underline">
+    <div className="text-3xl underline ">
   <ApolloProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />}/>
-          <Route path="/signup" element= {<Signup />}/>
+        <Route path="/login" element={<LoginButton/>}/>
+          <Route path="/signup" element= {<SignupButton/>}/>
           </Routes>
     </Router>
 </ApolloProvider>
+
+<div className="h-max bg-yellow-200">
+
+      <List />
+      <div className="ml-20 columns-3 flex justify-around">
+        <Budget />
+        <ExpenseTotal />
+        <Remaining />
+      </div>
+
+    </div>
+
     </div>
   );
 }
