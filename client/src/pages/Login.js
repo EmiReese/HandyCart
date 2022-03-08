@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
-function Login(props) {
+export default function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -43,7 +43,7 @@ function Login(props) {
 //     =======================================================================
  
 // This is our function that creates the login structure.
-function Login () {
+
     return (
         <div className="flex items-center min-h-screen bg-white dark:bg-gray-900">
             <div className="container mx-auto">
@@ -73,9 +73,8 @@ function Login () {
             </div>
         </div>
     );
-    }
 }
-export default Login;
+
 
 
 

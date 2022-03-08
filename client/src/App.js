@@ -1,5 +1,5 @@
 import React from "react";
-import List from "./pages/List";
+import GroceryList from "./pages/GroceryList";
 import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
 import Home from './pages/Home';
@@ -18,6 +18,7 @@ import {
   ApolloProvider,
   gql
 } from "@apollo/client";
+import UserProfile from "./pages/UserProfile";
 
 
 export default function App() {
@@ -28,10 +29,13 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/grocerylist" element={<GroceryList />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
+          <Route path="/signup" element={<SignupButton /> } />
+          <Route path="userprofile" element= {< UserProfile/> } />
+          
          
 
           </Routes>
