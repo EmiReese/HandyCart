@@ -9,6 +9,8 @@ const path = require('path');
 const db = require('./config/connection');
 // import schemas
 const { typeDefs, resolvers } = require('./schemas');
+// import security middleware
+const { authMiddleware } = require('./utils/auth');
 
 // open port
 const PORT = process.env.PORT || 3001;
@@ -18,6 +20,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware
 });
 // initialize middleware for express
 app.use(express.urlencoded({ extended: false }));

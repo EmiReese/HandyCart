@@ -2,11 +2,9 @@
 const mongoose = require('mongoose');
 
 // create the database using mongoose
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/handycart', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0/handycart', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
 });
 
 // export the mongoose connection

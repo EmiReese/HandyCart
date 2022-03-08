@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/EmiReese/mern-app#readme",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "apollo-client": "^2.6.10",
+    "concurrently": "^7.0.0",
+    "graphql": "^15.8.0"
   }
 }
