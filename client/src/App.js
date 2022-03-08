@@ -42,10 +42,6 @@ export default function App() {
 
     </Router>
 </ApolloProvider>
-<div className="grocery-app">
-      <GroceryList />
-    </div>
-  );
 
 </div> 
   );
