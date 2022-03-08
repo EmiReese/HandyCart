@@ -4,24 +4,46 @@ import gql from 'graphql';
 
 const LOGIN_MUTATION = gql`
   mutation LoginMutation(
-    $email: String!
+    $username: String!
     $password: String!
   ) {
-    login(email: $email, password: $password) 
+    login(username: $username, password: $password) 
   }
 `;
 
 const SIGNUP_MUTATION = gql`
   mutation SignupMutation(
-    $email: String!
+    $username: String!
     $password: String!
-    $name: String!
   ) {
     signup(
-      email: $email
+      username: $username
       password: $password
-      name: $name
     )
   }
 `;
+
+const NEW_LIST = gql`
+mutation newList(
+$newName: String!
+ $budget: Float!
+ $users: [ID]
+ ) {
+    newList(
+      name: $newName
+      budget: $budget
+      users: $users
+      )
+  }`
+
+  const NEW_ITEM = gql`
+  mutation newItem($itemName: itemInput! $itemPrice: priceInput! $itemQuantity: quantityInput!){
+    addItem(itemName: $itemName, itemPrice: $itemPrice, itemQuantity: $itemQuantity) {
+    list_id
+    newItems{
+      item_id
+    }
+    }
+  }
+  `
 
