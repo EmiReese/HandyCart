@@ -1,7 +1,10 @@
 import React from "react";
 import List from "./pages/List";
-
-
+import SignupButton from './components/parts/SignupButton';
+import LoginButton from './components/parts/LoginButton';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 import {
   BrowserRouter as Router,
@@ -10,14 +13,6 @@ import {
   Routes
 } from "react-router-dom";
 
-import SignupButton from './components/parts/SignupButton';
-import LoginButton from './components/parts/LoginButton';
-import Home from './pages/Home';
-
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-
-
 import {
   ApolloClient,
   ApolloProvider,
@@ -25,10 +20,9 @@ import {
 } from "@apollo/client";
 
 
-
 export default function App() {
   return (
-    <div className="text-3xl underline ">
+  <div className="text-3xl underline ">
   <ApolloProvider>
     <Router>
 
@@ -38,9 +32,8 @@ export default function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
-          <Route path="/signup" element={<SignupButton />} />
+         
 
-          
           </Routes>
 
     </Router>
