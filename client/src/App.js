@@ -1,9 +1,9 @@
 import React from "react";
 import List from "./pages/List";
 
-import Budget from "./components/Budget";
-import ExpenseTotal from "./components/ExpenseTotal";
-import Remaining from "./components/Remaining";
+import Budget from "./Components/Budget";
+import ExpenseTotal from "./Components/ExpenseTotal";
+import Remaining from "./Components/Remaining";
 
 
 import {
@@ -13,8 +13,8 @@ import {
   Routes
 } from "react-router-dom";
 
-import SignupButton from './components/parts/SignupButton';
-import LoginButton from './components/parts/LoginButton';
+import SignupButton from './Components/parts/SignupButton';
+import LoginButton from './Components/parts/LoginButton';
 import Home from './pages/Home';
 
 import Login from './pages/Login';
