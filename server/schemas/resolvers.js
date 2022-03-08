@@ -6,7 +6,11 @@ const resolvers = {
   Query: {
     userProfile: async (parent, args, context) => {
       if(context.user) {
-        const userData = await User.findById(context.user._id).select('-__v -password').populate('lists');
+        // const userData = await User.findById(context.user._id).select('-__v -password').populate('lists');
+        // const userData = await User.findById(context.user._id).populate('lists');
+        const userData = await User.findById(context.user._id).populate('lists')
+        console.log(userData);
+        console.log(userData.populated('lists'));
         return userData;
       }
       throw new AuthenticationError('Please log in');
@@ -39,12 +43,24 @@ const resolvers = {
     addUserToList: async (parent, { _id, username }) => {
       const getId = await User.findOne({ username });
 
-      const newUser = await List.findByIdAndUpdate(_id, 
+      const newUser = await List.findByIdAndUpdate(
+        _id, 
         { $push: { users: getId } },
         { new: true }
       );
 
       return newUser;
+    },
+
+    addListToUser: async(parent, { _id, username }) => {
+      const getListId = await List.findById(_id);
+
+      const newUser = await User.findOneAndUpdate(
+        { username },
+        { $push: { lists: getListId } },
+        { new: true })
+
+        return newUser;
     },
     login: async (parent, { username, password }) => {
       const user = await User.findOne({ username });
