@@ -1,5 +1,5 @@
 
-import gql from 'graphql';
+import { gql } from '@apollo/client';
 
 //notes: importing in gqu; specify mutation function; in the () we are passing a variable in.  $denotes<-- variable after : it is a datatype;  then, referring to specific mutation from typedefs{};  then in index.js (or wherever it goes), import in usemutation hook. 
 
