@@ -1,9 +1,6 @@
 import React from "react";
 import List from "./pages/List";
 
-import Budget from "./components/Budget";
-import ExpenseTotal from "./components/ExpenseTotal";
-import Remaining from "./components/Remaining";
 
 
 import {
@@ -20,6 +17,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
+
 import {
   ApolloClient,
   ApolloProvider,
@@ -33,26 +31,21 @@ export default function App() {
     <div className="text-3xl underline ">
   <ApolloProvider>
     <Router>
+
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/list" element={<List />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
+          <Route path="/signup" element={<SignupButton />} />
+
+          
           </Routes>
+
     </Router>
 </ApolloProvider>
-
-<div className="h-max bg-yellow-200">
-
-      <List />
-      <div className="ml-20 columns-3 flex justify-around">
-        <Budget />
-        <ExpenseTotal />
-        <Remaining />
-      </div>
-
-    </div>
-
-    </div>
+</div> 
   );
 }
 
