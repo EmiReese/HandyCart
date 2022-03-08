@@ -46,7 +46,7 @@ const typeDefs = gql`
     deleteItem(_id: ID!): Item
     changeQuantity(_id: ID!, quantity: Int!): Item
     changePrice(_id: ID!, price: Float!): Item
-    resetList(_id: ID!): List
+    resetList(_id: ID!): Item
     changeBudget(_id: ID!, budget: Float!): List
     deleteList(_id: ID!): List
   }
