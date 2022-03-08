@@ -60,7 +60,7 @@ function GroceryList() {
   };
 
   return (
-    <div>
+    <div className="grocery-app">
       <h1>Grocery List</h1>
       <GroceryForm onSubmit={addGroceryItem} />
       <Grocery
