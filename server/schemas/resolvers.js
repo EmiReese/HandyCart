@@ -7,47 +7,61 @@ const resolvers = {
   Query: {
     userProfile: async (parent, args, context) => {
       if(context.user) {
-        const userData = await User.findById(context.user._id).select('-__v -password');
+        // const userData = await User.findById(context.user._id).select('-__v -password').populate('lists');
+        // const userData = await User.findById(context.user._id).populate('lists');
+        const userData = await User.findById(context.user._id).populate('lists')
+        console.log(userData);
+        console.log(userData.populated('lists'));
         return userData;
       }
       throw new AuthenticationError('Please log in');
     },
     lists: async (parent, { _id }) => {
-      return await List.findById(_id).populate('users');
+      return await List.findById(_id).populate('users').populate('items');
     }
   },
   Mutation: {
-    signup: async (parent, args) => {
-      const user = new User({
-        username: args.username,
-        password: args.password
-      })
+    signup: async (parent, { username, password }) => {
+      const user = await User.create({ username: username, password: password });
       const token = signToken(user);
 
       return { token, user };
     },
-    newList: async (parent, { name, budget }, context) => {
+    newList: async (parent, { name, budget }) => {
       // console.log(context.user._id);
-      // const userId = context.user._id;
-      // const currentUser = await User.findById(userId);
-      // console.log(currentUser);
-      const list = new List({
-        name: name,
-        budget: budget,
-        users: context.user
-      });
-
-      return list;
+      // const currentUser = User.findById(context.user._id);
+      return await List.create({ name: name, budget: budget });
+      // const list = new List({
+      //   name: name,
+      //   budget: budget,
+      //   users: context.user
+      // });
+      // console.log(saved);
+      // saved.users.push(context.user);
+      // return await saved.save();
+      // return await list;
     },
     addUserToList: async (parent, { _id, username }) => {
       const getId = await User.findOne({ username });
 
-      const newUser = await List.findOneAndUpdate(_id, 
+      const newUser = await List.findByIdAndUpdate(
+        _id, 
         { $push: { users: getId } },
         { new: true }
       );
 
       return newUser;
+    },
+
+    addListToUser: async(parent, { _id, username }) => {
+      const getListId = await List.findById(_id);
+
+      const newUser = await User.findOneAndUpdate(
+        { username },
+        { $push: { lists: getListId } },
+        { new: true })
+
+        return newUser;
     },
     login: async (parent, { username, password }) => {
       const user = await User.findOne({ username });
@@ -67,12 +81,20 @@ const resolvers = {
       return { token, user };
     },
     changePurchaseStatus: async (parents, { _id }) => {
-       return await Item.findByIdAndUpdate(_id, { purchased: !purchased }, { new: true });
+       return await Item.findByIdAndUpdate(_id, { purchased: true }, { new: true });
     }, 
     addItem: async (parents, { _id, itemData }) => {
-      const newItem = new Item({ itemData });
+      const newItem = await Item.create({ 
+        name: itemData.name,
+        price: itemData.price,
+        quantity: itemData.quantity,
+        purchased: itemData.purchased 
+      });
       
-      return await List.findByIdAndUpdate(_id, { $push: { items: newItem } }, { new: true });
+      return await List.findByIdAndUpdate(_id, 
+        { $push: { items: newItem } }, 
+        { new: true }
+      );
     }, 
     deleteItem: async (parents, { _id }) => {
       return await Item.findByIdAndDelete(_id);

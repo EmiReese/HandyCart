@@ -10,7 +10,11 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "graphql": "^16.3.0",
+<<<<<<< HEAD
     "heroicons": "^1.0.6",
+=======
+    "jwt-decode": "^3.1.2",
+>>>>>>> 00421c5da3e046937b07129aad9676031d4bf6bc
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
