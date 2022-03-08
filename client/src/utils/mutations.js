@@ -1,17 +1,26 @@
+import { gql } from '@apollo/client';
 
-import gql from 'graphql';
+export const LOGIN = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
 
-//notes: importing in gqu; specify mutation function; in the () we are passing a variable in.  $denotes<-- variable after : it is a datatype;  then, referring to specific mutation from typedefs{};  then in index.js (or wherever it goes), import in usemutation hook. 
-
-const SIGNUP_MUTATION = gql`
-  mutation SignupMutation(
-    $username: String!
-    $password: String!
-  ) {
-    signup(
-      username: $username
-      password: $password
-    )
+export const SIGNUP = gql`
+  mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
   }
 `;
 

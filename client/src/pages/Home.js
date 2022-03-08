@@ -1,6 +1,6 @@
 import React from 'react';
-import SignupButton from '../Components/parts/SignupButton';
-import LoginButton from '../Components/parts/LoginButton';
+import SignupButton from '../components/parts/SignupButton';
+import LoginButton from '../components/parts/LoginButton';
 
 
 
@@ -9,8 +9,6 @@ export default function Home() {
     <div>
 
   <SignupButton />
-     
- 
   <LoginButton />
 
     </div>
