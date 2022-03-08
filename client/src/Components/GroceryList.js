@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import GroceryForm from "./GroceryForm";
 import Grocery from "./Grocery";
 import BudgetForm from "./BudgetForm";
+import Remaining from "./BudgetRemaining";
 
 
 function GroceryList() {
   const [grocery, setGrocery] = useState([]);
+
 
   // Function to add a Grocery list item
   const addGroceryItem = (item) => {
@@ -75,6 +77,7 @@ function GroceryList() {
   
 
 <BudgetForm/>
+<Remaining/>
 </div>
 </div>
   );

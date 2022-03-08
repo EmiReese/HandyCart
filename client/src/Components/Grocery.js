@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import GroceryForm from "./GroceryForm";
 
+
 function Grocery(props) {
   const [edit, setEdit] = useState({
     id: null,
     value: "",
   });
-
+  const [cost, setCost] = useState('');
+  
   console.log(props.grocery);
 
   const submitUpdate = (value) => {
@@ -22,8 +24,11 @@ function Grocery(props) {
     <div
       className={item.isComplete ? `grocery-row complete` : `grocery-row`}
       key={i}
-    >
+    ><div className='col-sm'>
+					
+				</div>
       <div key={item.id} onClick={() => props.completeGroceryItem(item.id)}>
+        {item.price}
         {item.text}
       </div>
       <div className="icons">
@@ -39,6 +44,7 @@ function Grocery(props) {
           {" "}
           ✏️
         </p>
+        
         <p onClick={() => props.removeGroceryItem(item.id)}> 🗑️</p>
       </div>
     </div>
