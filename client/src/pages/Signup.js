@@ -1,8 +1,36 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
+
+export default function Signup(props) {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [addUser] = useMutation(ADD_USER);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
+
+  const handleChange = (event) => {
+    const { email, password } = event.target;
+    setFormState({
+      ...formState,
+      [email]: email,
+      [password] : password
+    });
+  };
 
 //This is where I got the code for this component "https://tailwindcomponents.com/component/sign-up".
 
-export default function Signup() {
         return (
           <div className="container w-100 lg:justify-center">
               <div className="lg:w-2/6 xl:w-2/5 md:w-2/3 bg-gray-100 rounded-lg p-8">

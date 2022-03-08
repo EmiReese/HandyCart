@@ -1,5 +1,33 @@
 import React, { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
+
+function Login(props) {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
 // import React from 'react';
 
@@ -46,81 +74,8 @@ function Login () {
         </div>
     );
     }
- 
-
+}
 export default Login;
-
-
-
-
-
-
-//     return (
-//       <div>
-//         <h4 className="mv3">
-//           {formState.login ? 'Login' : 'Sign Up'}
-//         </h4>
-//         <div className="flex flex-column">
-//           {!formState.login && (
-//             <input
-//               value={formState.name}
-//               onChange={(e) =>
-//                 setFormState({
-//                   ...formState,
-//                   name: e.target.value
-//                 })
-//               }
-//               type="text"
-//               placeholder="Your name"
-//             />
-//           )}
-//           <input
-//             value={formState.email}
-//             onChange={(e) =>
-//               setFormState({
-//                 ...formState,
-//                 email: e.target.value
-//               })
-//             }
-//             type="text"
-//             placeholder="Your email address"
-//           />
-//           <input
-//             value={formState.password}
-//             onChange={(e) =>
-//               setFormState({
-//                 ...formState,
-//                 password: e.target.value
-//               })
-//             }
-//             type="password"
-//             placeholder="Choose a safe password"
-//           />
-//         </div>
-//         <div className="flex mt3">
-//           <button
-//             className="pointer mr2 button"
-//             onClick={() => console.log('onClick')}
-//           >
-//             {formState.login ? 'login' : 'create account'}
-//           </button>
-//           <button
-//             className="pointer button"
-//             onClick={(e) =>
-//               setFormState({
-//                 ...formState,
-//                 login: !formState.login
-//               })
-//             }
-//           >
-//             {formState.login
-//               ? 'need to create an account?'
-//               : 'already have an account?'}
-//           </button>
-//         </div>
-//       </div>
-//     );
-//   };
 
 
 
