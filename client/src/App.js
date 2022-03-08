@@ -1,9 +1,6 @@
 import React from "react";
-import List from "./pages/List";
-
-import Budget from "./Components/Budget";
-import ExpenseTotal from "./Components/ExpenseTotal";
-import Remaining from "./Components/Remaining";
+import "./App.css";
+import GroceryList from "./Components/GroceryList";
 
 
 import {
@@ -15,10 +12,10 @@ import {
 
 import SignupButton from './Components/parts/SignupButton';
 import LoginButton from './Components/parts/LoginButton';
-import Home from './pages/Home';
+import Home from './Pages/Home';
 
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
 
 import {
   ApolloClient,
@@ -35,7 +32,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/list" element={<GroceryList />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
@@ -45,8 +42,12 @@ export default function App() {
 
     </Router>
 </ApolloProvider>
+<div className="grocery-app">
+      <GroceryList />
+    </div>
+  );
+
 </div> 
   );
 }
-
 
