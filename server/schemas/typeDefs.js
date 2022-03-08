@@ -43,6 +43,7 @@ const typeDefs = gql`
     login(username: String!, password: String!): Auth
     changePurchaseStatus(_id: ID!): Item
     addItem(_id: ID!, itemData: ItemInput!): List
+    addListToUser(_id: ID!, username: String!): User
     deleteItem(_id: ID!): Item
     changeQuantity(_id: ID!, quantity: Int!): Item
     changePrice(_id: ID!, price: Float!): Item
