@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
           <Route path="/signup" element={<SignupButton /> } />
-          <Route path="userprofile" element= {< UserProfile/> } />
+          <Route path="/userprofile" element= {< UserProfile/> } />
           
          
 
