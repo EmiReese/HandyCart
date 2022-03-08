@@ -7,7 +7,7 @@ import LoginButton from '../Components/parts/LoginButton';
 export default function Home() {
     return(
     <div>
-  
+
   <SignupButton />
      
  
@@ -16,4 +16,3 @@ export default function Home() {
     </div>
     );
     }
-   

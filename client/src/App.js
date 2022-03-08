@@ -27,32 +27,25 @@ import {
 } from "@apollo/client";
 
 
-
 export default function App() {
   return (
-    <div className="text-3xl underline ">
+  <div className="text-3xl underline ">
   <ApolloProvider>
     <Router>
+
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/list" element={<List />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
+         
+
           </Routes>
+
     </Router>
 </ApolloProvider>
-
-<div className="h-max bg-yellow-200">
-
-      <List />
-      <div className="ml-20 columns-3 flex justify-around">
-        <Budget />
-        <ExpenseTotal />
-        <Remaining />
-      </div>
-
-    </div>
-
-    </div>
+</div> 
   );
 }
 
