@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { gql } from '@apollo/client';
-
-export const LOGIN = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-=======
 
 import gql from 'graphql';
 
@@ -13,7 +6,6 @@ import gql from 'graphql';
 export const SIGNUP_MUTATION = gql`
   mutation signup($username: String!, $password: String!) {
     signup(username: $username, password: $password) {
->>>>>>> 00421c5da3e046937b07129aad9676031d4bf6bc
       token
       user {
         _id
@@ -23,11 +15,6 @@ export const SIGNUP_MUTATION = gql`
   }
 `;
 
-<<<<<<< HEAD
-export const SIGNUP = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
-=======
 
 export const NEW_LIST = gql`
   mutation newList($name: String!, $budget: Float) {
@@ -63,13 +50,10 @@ export const ADD_USER = gql`
 export const LOGIN_MUTATION = gql`
   mutation login($username: String!, $password: String!) {
     login(username: $username, password: $password) {
->>>>>>> 00421c5da3e046937b07129aad9676031d4bf6bc
       token
       user {
         _id
         username
-<<<<<<< HEAD
-=======
         lists {
           _id
           name
@@ -116,15 +100,11 @@ export const ADD_LIST = gql`
       lists {
         _id
         name
->>>>>>> 00421c5da3e046937b07129aad9676031d4bf6bc
       }
     }
   }
 `;
 
-<<<<<<< HEAD
-
-=======
 export const DELETE_ITEM = gql`
   mutation deleteItem($id: ID!) {
     deleteItem(_id: $id) {
@@ -215,4 +195,3 @@ export const DELETE_LIST = gql`
     }
   }
 `;
->>>>>>> 00421c5da3e046937b07129aad9676031d4bf6bc
