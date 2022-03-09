@@ -5,7 +5,7 @@ import Avatar from '../Avatar-Maker.png';
 
 export default function UserProfile () {
 return (
-    <body className=" bg-gray-300 font-sans antialiased ">
+    <body className=" bg-secondary font-sans antialiased ">
         <div className="container mx-auto my-60 ">
             <div>
     
