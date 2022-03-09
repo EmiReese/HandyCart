@@ -1,10 +1,12 @@
 import React from "react";
-import GroceryList from "./pages/GroceryList";
+import "./App.css";
+import GroceryList from "./components/GroceryList";
 import SignupButton from './components/parts/SignupButton';
 import LoginButton from './components/parts/LoginButton';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import UserProfile from "./pages/UserProfile";
 
 import {
   BrowserRouter as Router,
@@ -18,8 +20,6 @@ import {
   ApolloProvider,
   gql
 } from "@apollo/client";
-import UserProfile from "./pages/UserProfile";
-
 
 export default function App() {
   return (
@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/login" element={<LoginButton/>} />
           <Route path="/signup" element= {<Signup/>}/>
           <Route path="/signup" element={<SignupButton /> } />
-          <Route path="userprofile" element= {< UserProfile/> } />
+          <Route path="/userprofile" element= {< UserProfile/> } />
           
          
 
@@ -42,8 +42,8 @@ export default function App() {
 
     </Router>
 </ApolloProvider>
+
 </div> 
   );
 }
-
 
