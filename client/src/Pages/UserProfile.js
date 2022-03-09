@@ -1,18 +1,19 @@
 import React from 'react';
-import Login from './Login'
+import Login from './Login';
+import Avatar from '../Avatar-Maker.png';
 
 
 export default function UserProfile () {
 return (
 
   
-    <body className="bg-gray-300 font-sans antialiased">
-        <div className="container mx-auto my-60">
+    <body className=" bg-gray-300 font-sans antialiased ">
+        <div className="container mx-auto my-60 ">
             <div>
     
-                <div className="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
+                <div className="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-5/6 xl:w-5/6 mx-auto">
                     <div className="flex justify-center">
-                            <img src="https://pantazisoft.com/img/avatar-2.jpeg" alt="" className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl border-4 border-white" />
+                            <img src={ Avatar } alt="" className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl border-4 border-white" />
                     </div>
                     
                     <div className="mt-16">
