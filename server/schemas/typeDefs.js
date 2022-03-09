@@ -1,5 +1,7 @@
 const { gql } = require('apollo-server-express');
 
+//typedefs are used to define our schema, and the types of data the schema will contain.
+
 const typeDefs = gql`
   type User {
     _id: ID
@@ -52,3 +54,15 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+
+
+
+//-------------
+
+
+// type Mutation {
+//   # Define which queries the front end is allowed to make and what data is returned
+//   type Query {
+//     items: [Item]
+//   }
+// }

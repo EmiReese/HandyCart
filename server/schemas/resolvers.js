@@ -2,6 +2,7 @@ const { User, List, Item } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
+//responsible for populating data defined by our typedefs
 const resolvers = {
   Query: {
     userProfile: async (parent, args, context) => {

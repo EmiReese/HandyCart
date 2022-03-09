@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GroceryList from "./components/GroceryList";
+import SignupButton from './components/parts/SignupButton';
+import LoginButton from './components/parts/LoginButton';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import UserProfile from "./pages/UserProfile";
 
-function App() {
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+  useQuery,
+  gql
+} from "@apollo/client";
+
+import { setContext } from '@apollo/client/link/context';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+
+const httpLink = createHttpLink({
+  uri: '/graphql'
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+});
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="text-3xl underline ">
+  <ApolloProvider client={client}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/grocerylist" element={<GroceryList />} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LoginButton/>} />
+        <Route path="/signup" element= {<Signup/>}/>
+        <Route path="/signup" element={<SignupButton /> } />
+        <Route path="/userprofile" element= {< UserProfile/> } />
+      </Routes>
+    </Router>
+  </ApolloProvider>
+  </div> 
   );
 }
 
-export default App;
