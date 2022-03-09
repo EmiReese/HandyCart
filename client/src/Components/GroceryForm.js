@@ -45,16 +45,8 @@ function GroceryForm(props) {
     <div>
       <h3>Update entry: {props.edit.value}</h3>
       <form className="grocery-form" onSubmit={handleSubmit}>
-      <label for='cost'>Cost/Item</label>
-					<input
-						type='text'
-            placeholder={props.edit.value}
-            className="grocery-input"
-						value={cost}
-						onChange={handleChangeCost}
-					></input>
-
-        <input
+      <label for='cost'>Item</label>
+				  <input
           type="text"
           placeholder={props.edit.value}
           value={input}
