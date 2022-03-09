@@ -17,7 +17,7 @@ return (
         <div className="container mx-auto my-60">
             <div>
     
-                <div className="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
+                <div className="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-5/6 xl:w-5/6 mx-auto">
                     <div className="flex justify-center">
                             <img src="https://avatars.dicebear.com/v2/bottts/:seed.svg" alt="" className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl border-4 border-white bg-slate-300" />
                     </div>
@@ -36,7 +36,6 @@ return (
                         </div>
                     </div>
                 </div>
-    
             </div>
         </div>
         ) : null}

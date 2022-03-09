@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import GroceryForm from "./GroceryForm";
 import Grocery from "./Grocery";
+import BudgetForm from "./BudgetForm";
+import Remaining from "./BudgetRemaining";
+
 
 function GroceryList() {
   const [grocery, setGrocery] = useState([]);
+
 
   // Function to add a Grocery list item
   const addGroceryItem = (item) => {
@@ -59,17 +63,23 @@ function GroceryList() {
     );
   };
 
-  return (
+  return (<div>
     <div className="grocery-app">
-      <h1>Grocery List</h1>
-      <GroceryForm onSubmit={addGroceryItem} />
-      <Grocery
-        grocery={grocery}
-        completeGroceryItem={completeGroceryItem}
-        removeGroceryItem={removeGroceryItem}
-        editGroceryItem={editGroceryItem}
-      ></Grocery>
-    </div>
+  <h1>Grocery List</h1>
+  <GroceryForm onSubmit={addGroceryItem} />
+  <Grocery
+    grocery={grocery}
+    completeGroceryItem={completeGroceryItem}
+    removeGroceryItem={removeGroceryItem}
+    editGroceryItem={editGroceryItem}
+  ></Grocery>
+
+  
+
+<BudgetForm/>
+<Remaining/>
+</div>
+</div>
   );
 }
 

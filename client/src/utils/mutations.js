@@ -1,3 +1,4 @@
+
 import { gql } from '@apollo/client';
 
 //notes: importing in gqu; specify mutation function; in the () we are passing a variable in.  $denotes<-- variable after : it is a datatype;  then, referring to specific mutation from typedefs{};  then in index.js (or wherever it goes), import in usemutation hook. 
@@ -125,6 +126,14 @@ export const CHANGE_QUANTITY = gql`
       quantity
       purchased
     }
+<<<<<<< HEAD
+  }
+`;
+
+export const CHANGE_PRICE = gql`
+  mutation changePrice($id: ID!, $price: Float!) {
+    changePrice(_id: $id, price: $price) {
+=======
   }
 `;
 
@@ -144,6 +153,7 @@ export const CHANGE_PRICE = gql`
 export const RESET_LIST = gql`
   mutation resetList($id: ID!) {
     resetList(_id: $id) {
+>>>>>>> af5e32822c2cb2e0d474cc54bbe3383ec218d394
       _id
       name
       price
@@ -153,6 +163,40 @@ export const RESET_LIST = gql`
   }
 `;
 
+<<<<<<< HEAD
+//again, I think there needs to be more to this
+export const RESET_LIST = gql`
+  mutation resetList($id: ID!) {
+    resetList(_id: $id) {
+      _id
+      name
+      price
+      quantity
+      purchased
+=======
+export const CHANGE_BUDGET = gql`
+  mutation changeBudget($id: ID!, $budget: Float!) {
+    changeBudget(_id: $id, budget: $budget) {
+      _id
+      name
+      budget
+      users {
+        _id
+        username
+      }
+      items {
+        _id
+        name
+        price
+        quantity
+        purchased
+      }
+>>>>>>> af5e32822c2cb2e0d474cc54bbe3383ec218d394
+    }
+  }
+`;
+
+<<<<<<< HEAD
 export const CHANGE_BUDGET = gql`
   mutation changeBudget($id: ID!, $budget: Float!) {
     changeBudget(_id: $id, budget: $budget) {
@@ -174,6 +218,8 @@ export const CHANGE_BUDGET = gql`
   }
 `;
 
+=======
+>>>>>>> af5e32822c2cb2e0d474cc54bbe3383ec218d394
 export const DELETE_LIST = gql`
   mutation deleteList($id: ID!) {
     deleteList(_id: $id) {
@@ -193,4 +239,8 @@ export const DELETE_LIST = gql`
       }
     }
   }
+<<<<<<< HEAD
 `;
+=======
+`;
+>>>>>>> af5e32822c2cb2e0d474cc54bbe3383ec218d394

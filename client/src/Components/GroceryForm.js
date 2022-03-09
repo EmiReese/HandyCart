@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function GroceryForm(props) {
   const [input, setInput] = useState("");
+  const [cost, setCost] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,13 +15,20 @@ function GroceryForm(props) {
     setInput("");
   };
 
+
   const handleChange = (e) => {
     setInput(e.target.value);
   };
 
+  const handleChangeCost = (e) => {
+    setCost(e.target.value);
+  };
+
   return !props.edit ? (
     <div>
+      
       <form className="grocery-form" onSubmit={handleSubmit}>
+        
         <input
           type="text"
           placeholder="Add item to list"
@@ -37,7 +45,8 @@ function GroceryForm(props) {
     <div>
       <h3>Update entry: {props.edit.value}</h3>
       <form className="grocery-form" onSubmit={handleSubmit}>
-        <input
+      <label for='cost'>Item</label>
+				  <input
           type="text"
           placeholder={props.edit.value}
           value={input}
